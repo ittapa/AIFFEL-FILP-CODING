@@ -11,47 +11,41 @@
     4. 케이스별 순환 연산
 '''
 
-#T = int(input())
-T = 1
+T = int(input())
 
 for test_case in range(1, T + 1):
-	#k,n,w = map(int, input().split(" "))
-	k, n, m = 3, 10, 5
 
-	#mList =  list(map(int, input().split(" ")))
-	mList = [1,3,7,8,9]
-	mList.sort(); # 오름차순 정렬
+    #data import
+	k,n,w = map(int, input().split(" "))
+	mList =  list(map(int, input().split(" ")))
+	mList.sort();  # 오름차순 정렬
 
-	efList =[] #최적 충전 정류장을 담는 변
-	hp = k #현재 충전상태
+	efList = []  # 최적 충전 정류장을 담는 변
+	hp = k  # 현재 충전상태
 
-	#정류장 하나씩 이동.
+	# 정류장 하나씩 이동.
 	for cp in range(1, n):
+
 		hp -= 1  # 충전거리 감소
-		#배터리 고갈
-		if k<0:
-			result =0
+
+		# 배터리 고갈
+		if k < 0:
+			result = 0
 			break
 
-		#최적의 경로 찾기
+		# 최적의 경로 찾기
 		if cp in mList:
-
 			nextP = mList[mList.index(cp):][1] # 다음정류장 조회
-			if nextP - cp > hp & nextP > cp+k : #다음정류장 갈 수 있는지 체크 후 충전 및 데이터입력
-				hp = k # 충전
+			if nextP - cp > hp & nextP > cp+k :  # 다음정류장 갈 수 있는지 체크 후 충전 및 데이터입력
+				hp = k  # 충전
 				efList.append(cp)
 				# 목적지 도착 전 마지막 충전.
 				if cp + hp >= n:
 					result = len(efList)
 					break
-				# 다음 충전 후 목적지 도착할 경우
-				elif nextP + k >=n:
-					efList.append(nextP)
-					result = len(efList)
-					break
+
 			if cp+hp < nextP: #다음 정류장까지 못가는 경우
 				result = 0
 				break
 
-
-	print("#{} {}".format(T, result))
+	print("#{} {}".format(test_case, result))
