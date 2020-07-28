@@ -62,9 +62,9 @@ x_train_norm = x_train/255.0   # 입력은 0~1 사이의 값으로 정규화
 #
 
 # 2. model hyperpram, layer set
-n_channel_1=30
-n_channel_2=38
-n_dense=42
+n_channel_1=48
+n_channel_2=42
+n_dense=36
 n_train_epoch=10
 
 model=keras.models.Sequential()
