@@ -1,3 +1,8 @@
+## https://github.com/ittapa/AIFFEL_LSG/tree/master/lms
+## 폴더내에 쥬피터 파일
+
+
+
 '''
 1. data import    train
  - 정규화
@@ -74,7 +79,7 @@ model.add(keras.layers.Conv2D(n_channel_2, (3,3), activation='relu'))
 model.add(keras.layers.MaxPooling2D((2,2)))
 model.add(keras.layers.Flatten())
 model.add(keras.layers.Dense(n_dense, activation='relu'))
-model.add(keras.layers.Dense(10, activation='softmax'))
+model.add(keras.layers.Dense(3, activation='softmax'))
 
 print('Model에 추가된 Layer 개수: ', len(model.layers))
 
