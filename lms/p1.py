@@ -1,5 +1,5 @@
 ## https://github.com/ittapa/AIFFEL_LSG/tree/master/lms
-## 폴더내에 쥬피터 파일
+## 폴더 내에 쥬피터 파일 
 
 
 
