@@ -93,14 +93,14 @@ model.fit(x_train_norm, y_train, epochs=10)
 #end 학습 완료
 
 
-#3-2 test 데이터 import 및 정규화
+#4 test 데이터 import 및 정규화
 image_dir_test_path = os.getenv("HOME") + "/aiffel/test_rcp" #test data 폴더를 따로 생성함.
 x_test, y_test = load_data(image_dir_test_path)
 x_test_norm = x_test/255.0   # 입력은 0~1 사이의 값으로 정규화
 
 
-#test data 를 통한 검
-test_loss, test_accuracy = model.evaluate(x_test_reshaped,y_test, verbose=2)
+#4-1 test data 를 통한 검증
+test_loss, test_accuracy = model.evaluate(x_test,y_test, verbose=2)
 print("test_loss: {} ".format(test_loss))
 print("test_accuracy: {}".format(test_accuracy))
 
