@@ -8,3 +8,8 @@
 2. https://programmers.co.kr
 3. 
 
+
+
+
+- https://docs.python.org/ko/3/library/functions.html#sorted
+
