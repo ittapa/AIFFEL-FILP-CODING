@@ -20,11 +20,26 @@ def solution(citations):
     citations.sort(reverse=True) #내림차순
     print(citations)
     N = len(citations)
-    for h in range(N,0,-1):
-        print(h)
-        # if citations[h] >= h:
-        #     return h
-    return 0
+
+    for i, c in enumerate(citations):
+        print(i+1)
+        print(c)
+
+
+        for i2 in range(c):
+            print(i2)
+        print("-------------------------------")
+
+
+    return 0;
+
+
+
+    # for h in range(N,0,-1):
+    #     print(h)
+    #     # if citations[h] >= h:
+    #     #     return h
+    # return 0
 
 
 
