@@ -14,21 +14,6 @@ https://programmers.co.kr/learn/courses/30/lessons/42576
 '''
 
 
-'''
-
-결과 담을 dict 선언를(result,dict)
-
-p(list)에 값을 c(list) 대조하여서 찾고
-있는지 없는지 여부를 0,1 
-p값과 여부 값을 결과
-결과 담는 dict의 insert
-
-+++++ 동명이인 처리
-
-
-'''
-
-
 #testData
 p1 = ["leo", "kiki", "eden"]
 c1 = ["eden", "kiki"]
@@ -41,57 +26,28 @@ p3= ["mislav", "stanko", "mislav", "ana"]
 c3 = ["stanko", "ana", "mislav"]
 
 
+'''
 
+참가자랑 완주 list 를 정렬하고
+비교한다. 비완주자는 한 명이기에
+정렬한 두 리스트 값을 차례대로 비교, 다른 값이 범인 리턴 
+비완주자가 마지막에 잇는 경우 를 위해
+반복문안에서 해결안될을 시 마지막 참가자 리턴
+
+'''
 def solution(participant, completion):
-    resultList = []  # 결론 정의할 dict 변수 선언
-    listIndex = 0
-    for p in participant:
-        for c in completion:
-            if p == c:
-                completion.remove(c) # 제거 중복성
-                print(completion)
-                r =1 # 완주
-            else :
-                r=0 # 완주실패
-                print("result", p)
-                return p
+    participant.sort()
+    completion.sort()
+    for i in range(len(completion)):
+        if participant[i] != completion[i]: return participant[i]
+    return participant[-1]
 
-                #return p
-        resultList.insert(listIndex, {p:r})
-        listIndex +=1
-
-    print(resultList)
-    return 0
-
-
-
-#solution(p1, c1) # leo
 r = solution(p2, c2) # vinko
+
 print(r)
 
-
-
-
-
-
-
-
-#동명이인 고려아함. ㅠ
-def solution1(participant, completion):
-
-    resultDict = {} #결론 정의할 dict 변수 선언.
-
-    for p in participant:
-        if p in completion :
-            r = 1
-        else:
-            r = 0
-        resultDict.update({p:r})
-
-    for k in resultDict.keys():
-        if resultDict.get(k) == 0: return k
-
-    return 0
-
-
-
+##다른 풀이
+import collections
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
