@@ -12,3 +12,25 @@ phone_book의 길이는 1 이상 1,000,000 이하입니다.
 각 전화번호의 길이는 1 이상 20 이하입니다.
 
 '''
+
+'''
+전화번호 하나씩 꺼내기 for 문.
+다른 전화에 접두어인지 비교하기
+ - 아니면 계속 
+ - 맞으면 return answer=false
+ - 끝가지 아니면 true
+'''
+
+t1 = ["119", "97674223", "1195524421"]
+t2 = ["123","456","789"]
+t3 = ["12","123","1235","567","88"]
+
+def solution(phone_book):
+    l = len(phone_book)
+    phone_book.sort()
+    for i, strNum in enumerate(phone_book):
+        for i2 in range(i+1, l):
+            if phone_book[i2].startswith(strNum):
+                return False
+    return True
+
