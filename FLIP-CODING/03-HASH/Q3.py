@@ -1,7 +1,10 @@
 '''
 스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.
 
-예를 들어 스파이가 가진 옷이 아래와 같고 오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면 다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.
+예를 들어 스파이가 가진 옷이 아래와 같고
+오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면
+다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.
+
 
 종류	이름
 얼굴	동그란 안경, 검정 선글라스
@@ -23,10 +26,31 @@ https://programmers.co.kr/learn/courses/30/lessons/42578
 '''
 
 
+'''
+종류별 갯수 파악.
+그리고 경우의 수 계산
+-각자1
+-조합()
+
+'''
+
 t1 = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]] #return 5
 t2 = [["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_makeup", "face"]] # 3
 
 def solution(clothes):
-    answer = 0
-    return answer
+    ### 종류별로 갯수 계
+    D = {}
+    for c in clothes:
+        if c[1] in D:
+            D[c[1]] += 1
+        else:
+            D[c[1]] = 1
+    c = 1
+    for d in D.values():
+        c *=d+1 # 종류별로 안 입는 것도 갯수
+    return c - 1 # 전부다 안입는 건 안됨.
+r1 = solution(t1) #5
+r2 = solution(t2)
+print(r1) # 5
+print(r2) # 3
 

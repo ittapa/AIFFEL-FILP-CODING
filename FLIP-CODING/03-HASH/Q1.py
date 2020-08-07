@@ -32,8 +32,7 @@ c3 = ["stanko", "ana", "mislav"]
 비교한다. 비완주자는 한 명이기에
 정렬한 두 리스트 값을 차례대로 비교, 다른 값이 범인 리턴 
 비완주자가 마지막에 잇는 경우 를 위해
-반복문안에서 해결안될을 시 마지막 참가자 리턴
-
+반복문안에서 해결안될을 시 마지막 참가자가 범인 리턴
 '''
 def solution(participant, completion):
     participant.sort()

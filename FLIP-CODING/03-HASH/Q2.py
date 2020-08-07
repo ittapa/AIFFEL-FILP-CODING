@@ -27,10 +27,13 @@ t3 = ["12","123","1235","567","88"]
 
 def solution(phone_book):
     l = len(phone_book)
-    phone_book.sort()
+    phone_book = list(map(str, sorted(list(map(int, phone_book)))))
     for i, strNum in enumerate(phone_book):
         for i2 in range(i+1, l):
             if phone_book[i2].startswith(strNum):
                 return False
     return True
 
+print(solution(t1))
+print(solution(t2))
+print(solution(t3))
