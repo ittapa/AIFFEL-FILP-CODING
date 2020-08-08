@@ -20,31 +20,33 @@ t1_p = [500, 600, 150, 800, 2500]
 
 def solution(genres, plays):
     answer = []
-    Dc = {}
-    Dl = {}
+    cs = {} #카테고리 별 합계를 담는 딕
+    cl = {} #카테고리 별 번호와 재생 수를 리스트로 담는
     for idx, c in enumerate(plays):
-        if genres[idx] in Dc.keys():
-            Dc[genres[idx]] += c
+        # 장르 별 합 연산
+        if genres[idx] in cs.keys():
+            cs[genres[idx]] += c
         else:
-            Dc[genres[idx]] = c
+            cs[genres[idx]] = c
 
-        if genres[idx] in Dl.keys():
-            Dl[genres[idx]].append([idx, c])
+        # 장르 별 List 분류
+        if genres[idx] in cl.keys():
+            cl[genres[idx]].append([idx, c])
         else:
-            Dl[genres[idx]] = [(idx, c),]
+            cl[genres[idx]] = [[idx, c]]
 
-    # 장르내 정렬
+    #print(cl)
 
+    # 장르별 합산 값 정렬
+    cs = sorted(cs.items(), key=lambda item: item[1], reverse=True)  # value: [1]
 
-    # 장르별 정렬
-    Dc = sorted(Dc.items(), key=lambda item: item[1], reverse=True)  # value: [1]
-    print(Dl)
+    # 장르별  정렬 후 list 2개만 색출
 
-    for d in Dc:
-        print(d)
-
-    return Dc
-
+    for c in cs:
+        tl = sorted(cl[c[0]], key=lambda item: item[1], reverse=True) # 장르별 리스트 내용들 정렬.
+        answer.append(tl[0][0])
+        if len(tl) >= 2: answer.append(tl[1][0]) # 장르별 리스트가 1개일때 걸르기
+    return answer
 
 r1 = solution(t1_g, t1_p)
 print(r1)

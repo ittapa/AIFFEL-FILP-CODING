@@ -48,7 +48,9 @@ def solution(clothes):
     c = 1
     for d in D.values():
         c *=d+1 # 종류별로 안 입는 것도 갯수
-    return c - 1 # 전부다 안입는 건 안됨.
+    return c - 1 # 전부다 안 입는 건 안됨.
+
+
 r1 = solution(t1) #5
 r2 = solution(t2)
 print(r1) # 5
