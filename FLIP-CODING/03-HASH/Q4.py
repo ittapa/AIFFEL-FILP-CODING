@@ -50,3 +50,13 @@ def solution(genres, plays):
 
 r1 = solution(t1_g, t1_p)
 print(r1)
+
+
+
+
+
+
+
+
+
+
