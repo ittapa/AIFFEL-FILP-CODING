@@ -13,16 +13,17 @@ def solution(prices):
 
 t1  =[1, 2, 3, 2, 3]
 
-print(solution(t1))
+
 
 def solution2(prices):
-    answer = []
-
-    for p in prices:
-
-        print(prices.pop(-1) #
+    answer =[]
+    L = len(prices)
+    for idx in range(L):
+        a = prices.pop()
+        print(a)
 
 
     return answer
 
-solution2(t1)
+
+print(solution2(t1))
