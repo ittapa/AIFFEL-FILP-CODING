@@ -20,7 +20,7 @@ def solution(progresses, speeds):
             if L1[idx][2] != 1:
                 L1[idx][0] = L1[idx][0] +L1[idx][1]  # 현재 진행도= 현재 진행도 + 하루 진행량.
                 if(L1[idx][0] >= 100): # 현재 진행도 100% 돌파시 .......
-                    L1[idx][2] =1
+                    L1[idx][2] =1 # 완료
             else:
                 pass
                 #완료, 제거하기
@@ -34,6 +34,7 @@ def solution(progresses, speeds):
             else: # 순서대로 하나라도 안걸리면 for문 아웃 배포안함.
                 break;
 
+        # count 0 이 아니라면
         if count != 0:
             answer.append(count)
 
