@@ -6,14 +6,14 @@ def solution(progresses, speeds):
     answer = [] # 정답
    # day = 0 #1
     L1 = [] # 현재 진행도와 하루 진행량 , 완 여부, 배포 여부
-    ac = False  # 완료 여부
+    #ac = False  # 완료 여부
 
     #L1 초기화
     for idx in range(len(progresses)):
         L1.append([progresses[idx], speeds[idx], 0 , 0])
 
 
-    while(not ac):
+    while():
         #day = day +1 # 또 하루가 간다.
 
         for idx in range(len(L1)):
@@ -42,7 +42,7 @@ def solution(progresses, speeds):
         if 0 in (l[2] for l in L1):
             pass
         else:
-            ac = True
+            return answer
     return answer
 
 r1= solution(t1_p, t1_s)
