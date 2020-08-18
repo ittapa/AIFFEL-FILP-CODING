@@ -9,7 +9,7 @@
 .idea
 
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*f
 
 */checkpoint/*
 
@@ -262,3 +262,4 @@ dmypy.json
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,jupyternotebooks
 /lms/E4-dog_cat_classifier/cat_vs_dog/checkpoint/
 /lms/E4-dog_cat_classifier/flower_classifier/checkpoint/
+/lms/E07-Recommender_sys/data/lastfm-dataset-360K/usersha1-artmbid-artname-plays.tsv
