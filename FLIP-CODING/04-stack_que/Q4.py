@@ -1,7 +1,7 @@
 
 
 def solution(priorities, location):
-    answer = 0 # 현재 출력 순서 정보
+    answer = 0 # 현재 출력 순서0 정보
     pl = [] # 순서대로 담긴 출력 우선수위와, 출력 여부 담기
     for p in priorities:
         pl.append([p, 0]) #기본 출력 여부는 0 출력하면 1
