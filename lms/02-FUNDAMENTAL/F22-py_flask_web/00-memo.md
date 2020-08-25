@@ -22,3 +22,25 @@ $ (aiffel) pip install pandas
 $ pip install flask
 
 ```
+
+
+### 기본코드
+
+```app = Flask(__name__)```
+- Flask 객체가 생성되어 app라는 변수에 저장됩니다.
+
+`````@app.route(‘/’)`````
+- @와 같이 적힌 코드를 데코레이터(decorator)라고 부릅니다. 이 데코레이터는 URL 규칙을 받아 해당하는 규칙의 URL로 요청이 들어오면 붙어 있는 함수(여기에서는 hello())를 실행하게끔 설정합니다.
+(‘/’)가 http://IP:(port number)/ 맨 뒤의 /를 의미하며 이는 root의 위치를 나타냅니다.
+
+- 데코레이터(decorator)
+- 데코레이터는 함수를 반환하는 함수입니다. 데코레이터 밑에 있는 함수가 실행되기 전에 먼저 데코레이터가 실행된다고 생각하면 됩니다.
+
+
+### 플라스크 권장 파일 트리
+- static : 정정 리소스
+- template : 페이지 템플릿
+- app.py
+
+
+#### 탬플릿 엔진 JInja2

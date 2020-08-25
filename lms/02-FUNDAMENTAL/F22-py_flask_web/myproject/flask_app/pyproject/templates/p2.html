@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>해보기2 sql 처리 페이지</title>
+</head>
+<body>
+
+    <form action="/sql" method="post">
+
+
+        <h1>sql 처리 페이지</h1>
+        <br/>
+        <h2>데이터베이스 이름</h2>
+        <br/>
+        <input type="text" name="dbName" placeholder="db이름 넣어라">
+        <br/>
+        <br/>
+        <h2>sql 명령어 한줄만 가능</h2>
+        <textarea nam="sql" placeholder="sql문 넣어라">
+
+        </textarea>
+        <br/>
+        <button type="submit" >발사</button>
+        <br/>
+        <span>{{result}}</span>
+
+    </form>
+
+
+</body>
+</html>
