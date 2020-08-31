@@ -8,9 +8,9 @@ import heapq
 def solution(jobs):
 
     time = 0
-    heapq.heapify(jobs) # heap으로 초기화
-    ctimes = []
+    heapq.heapify(jobs) # heap으로
 
+    ctimes = []
 
     ## 정렬기준1, 요청시간, 정렬기준2 -걸리는시간
     while jobs :
@@ -32,9 +32,10 @@ def solution(jobs):
 
         # 현재시간에서 가능한 테스크 (걸리는시간 이
         heapq.heapify(h2)
+
         a1 = heapq.heappop(h2) # 가장 요청이 가장 빠른 우선순위
         time += a1[0]  # 처리시간 ++ ( 현재시간 + 걸린시간)
-        ctimes.append(time -a1[1]) #요청시간으로 부터 걸린 시간 (현재시간 - 요청시간)
+        ctimes.append(time - a1[1]) #요청시간으로 부터 걸린 시간 (현재시간 - 요청시간)
 
         for h in h2:
             v = heapq.heappop(h2)
@@ -45,19 +46,55 @@ def solution(jobs):
 
 
     # 평균 출력
-    answer = sum(ctimes) / len(ctimes)
-
-
-    return answer
+    return sum(ctimes) / len(ctimes)
 
 
 
 
+def solution2(jobs):
+
+    time = 0 # 현재시간,
+    answer  = [] # job별 총 소요시간 입력 받는 변수.
+    temp = []
+    heapq.heapify(temp)
+
+    while jobs:
+
+        for j in jobs:
+            if j[0] <= time:  # 현재시간보다 같거나 작은 task 는 시작가능.
+                # 소요시간, 요청시간 소요시간순 정렬을 위해,
+                heapq.heappush(temp, (j[1], j))
+
+
+        if temp :
+            #a = temp.pop(temp.index(heapq.nsmallest(1, temp)[0])) # 소요시간이 가장 큰 값.
+            a = heapq.heappop(temp)
+            time += a[0] # 현재시간 + 소요시간, 현재시간
+
+            answer .append(time - a[1][0]) # 현 완료시간 - 요청시간 /  job 당 총 소요시간 요청시간~완료시간
+
+            jobs.remove(a[1])
+            temp =[]
+        else :
+            time +=1 # 현재 실행가능한 job이 없을 때,
+
+
+    # 평균 출력
+    return sum(answer) // len(answer)
 
 
 
+
+
+
+
+# solution 실패
 jobs1 = [[0, 3], [1, 9], [2, 6]]
 
-r1 = solution(jobs1)
+# r1 = solution(jobs1)
+# print(r1)
 
-print(r1)
+#solution 2
+
+r2 = solution2(jobs1)
+print(r2)
