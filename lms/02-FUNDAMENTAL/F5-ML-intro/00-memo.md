@@ -30,7 +30,7 @@
 - 머신러닝개념: 기계 학습 또는 머신 러닝은 인공 지능의 한 분야로서, 데이터를 평가하고 처리하는 과정에서 쌓인 경험을 통해 기계가 과업 처리 성능을 자동 개선하도록 하는 컴퓨터 알고리즘 연구 분야
 - 명시적인 프로그래밍
 - 전통 적인 프로그래밍 vs
-![](./imgs/00-tp_ml.png)
+![](imgs/00-tp_ml.png)
 
 - 딥러닝
    --> 신경망(뉴런), 퍼셉트론 구조, 패턴학습
@@ -57,7 +57,7 @@
         AlexNet / VGGNet / ResNet   
         rotation ,shifting, rescaling, flipping, shearing, stretching
 - data
-![s](./imgs/02-data.png)
+![s](imgs/02-data.png)
         
    --> 특성(feature):입력 데이터의 속성,    
    --> 가중치(w): 
@@ -69,14 +69,14 @@
    ####
 -  경사하강법(미분을 통해 가중치와 bias 를 구함)
 -  미분 TODO 이해하기
-![s](./imgs/01-derivative.png)
+![s](imgs/01-derivative.png)
 
 #### 미분과 머신러닝
 - Loss Function
 - mse (mean square error)    
-![s](./imgs/03-mse.png)   
+![s](imgs/03-mse.png)   
 - 손실함수의 기울기와 경사 하강법
-  ![s](./imgs/04.png)    
+  ![s](imgs/04.png)    
  - 경사하강법 종류 LINK : https://medium.com/@lachlanmiller_52885/machine-learning-week-1-cost-function-gradient-descent-and-univariate-linear-regression-8f5fe69815fd
 
 #### ?

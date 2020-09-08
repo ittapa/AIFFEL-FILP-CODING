@@ -16,7 +16,7 @@
 
 
 ## 기울기와 경사하강법(Gradient Descent)
-![f](./imgs/01-loss_graph.png)
+![f](imgs/01-loss_graph.png)
  - 하이퍼 파리미터
  - learning rate
  
@@ -36,5 +36,5 @@
  
  ### 손실함수 미분 
  - TODO 이해하기
- ![f](./imgs/02-L_fn_d.png)
- ![f](./imgs/03-L_fn_d2.png)
+ ![f](imgs/02-L_fn_d.png)
+ ![f](imgs/03-L_fn_d2.png)

@@ -14,4 +14,4 @@ tar -xvzf lastfm-dataset-360K.tar.gz
 -tsv ( tab space values)
 
 - Matrix Factorization(MF)
-![a](./imgs/00-mf.png)
+![a](imgs/00-mf.png)

@@ -63,7 +63,7 @@ print(pd.__version__)</code></pre>
 엔트로피 값은 0에서 1사이의 값을 가지며, 가장 혼합도가 높은 상태의 값이 1이고, 반대는 0이다.(하나의 레코드로만 구성된 상태의 값) Decision Algorithm에서는 엔트로피가 높은 상태에서 낮은 상태가 되도록 데이터를 특정 조건을 찾아 나무 모양으로 구분해나간다.
 
 -이해:
-![screensh](./imgs/00%20entropy_youtube.png)
+![screensh](imgs/00 entropy_youtube.png)
    각 라벨들의 확률분포의 함수.
    내가 가진 정보의 양과 라벨들의 최적으로 압축할 수 있는 것.
    
@@ -74,13 +74,13 @@ print(pd.__version__)</code></pre>
 
 _지니계수 (gini index)
   - 지니계수 공식
-  ![screensh](./imgs/02%20gini_index_fn.png)
+  ![screensh](imgs/02 gini_index_fn.png)
  
 
 
 
 - 오분류오차(misclassification error)   
-![screensh](./imgs/01%20misclass_error.png)
+![screensh](imgs/01 misclass_error.png)
    -> 미분 불가능
 - 모델학습   
    -> 재귀적 분기(recursive partitioning)
@@ -132,7 +132,7 @@ Alpha=ERR(T)와 L(T)를 결합하는 가중치(사용자에 의해 부여됨, �
 - ref link https://m.blog.naver.com/kiddwannabe/221369816719
 
 - tn / fn / tp / fp
-![screensh](./imgs/05.jpg)
+![screensh](imgs/05.jpg)
 - 성능 지
 1. 정밀도(precision)
 2. negative predictive value
@@ -147,7 +147,7 @@ https://sumniya.tistory.com/26
  -> 스팸판독기는 스팸이라고 예측하는 것이중요(즉 스팸이 아닌데 스팸이라고 하면 사고고)
 
 - f1 정밀도, 재현율 평균값 
-![screensh](./imgs/04.png)
+![screensh](imgs/04.png)
 
 
 
