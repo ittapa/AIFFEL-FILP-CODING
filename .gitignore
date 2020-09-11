@@ -263,3 +263,4 @@ dmypy.json
 /lms/01-EXPLORATION/E04-dog_cat_classifier/cat_vs_dog/checkpoint/
 /lms/01-EXPLORATION/E04-dog_cat_classifier/flower_classifier/checkpoint/
 /lms/01-EXPLORATION/E07-Recommender_sys/data/lastfm-dataset-360K/usersha1-artmbid-artname-plays.tsv
+/lms/01-EXPLORATION/E12-face_embed/imgs/p2/
