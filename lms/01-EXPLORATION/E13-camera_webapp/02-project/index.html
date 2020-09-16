@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>caputre </title>
+    <head>
+        <meta charset="UTF-8">
+        <title>capture</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0" ></script>
 
-</head>
-<body>
-    <h1>project</h1>
-    <video playsinline autoplay></video>
-    <button>Take snapshot</button>
-    <canvas></canvas>
+    </head>
+    <body>
+        <h1>project</h1>
+        <video playsinline autoplay></video>
+        <button>Take snapshot</button>
+        <canvas></canvas>
+        <script>
+            <!--  tag select       -->
+            video = document.querySelector('video');
+            canvas = document.querySelector('canvas');
+            button = document.querySelector('button');
 
-    <script>
-<!--   tag select     -->
-        video = document.querySelector('video');
-        canvas = document.querySelector('canvas');
+            <!-- btn event fn define   -->
+            button.onclick = function() {
+              canvas.width = video.videoWidth;
+              canvas.height = video.videoHeight;
+              canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+                mobilenet.load().then(model => {
+                  model.classify(canvas).then(predictions => {
+                    alert(predictions[0].className + ': ' + predictions[0].probability);
+                    console.log(predictions);
+                  });
+                });
+            };
 
-<!--    size 조정    -->
-        canvas.width = 48;
-        canvas.height = 48;
+            constraints = {
+              audio: false,
+              video: true
+            };
 
-        canvas.style.filter = 'grayscale(1)';
-        video.style.transform = 'scaleX(-1)';
+            function handleSuccess(stream) {
+              video.srcObject = stream;
+            }
 
-        button.onclick = function() {
-            w = video.videoWidth;
-            h = video.videoHeight;
-            s = Math.min(w, h);
-            sx = (w-s)/2;
-            sy = (h-s)/2;
+            function handleError(error) {
+              alert('navigator.MediaDevices.getUserMedia error: ' + error.message + error.name);
+            }
 
-            canvas.getContext('2d').drawImage(video, sx=sx, sy=sy, swidth=s,
-            sheight=s, x=0, y=0, width=48, height=48);
-        };
+            navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 
-    </script>
-</body>
+
+        </script>
+    </body>
 </html>
