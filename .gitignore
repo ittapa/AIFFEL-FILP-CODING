@@ -264,3 +264,9 @@ dmypy.json
 /lms/01-EXPLORATION/E04-dog_cat_classifier/flower_classifier/checkpoint/
 /lms/01-EXPLORATION/E07-Recommender_sys/data/lastfm-dataset-360K/usersha1-artmbid-artname-plays.tsv
 /lms/01-EXPLORATION/E12-face_embed/imgs/p2/
+/lms/02-FUNDAMENTAL/F35-python_img/cifar-100-python.tar.gz
+
+
+##
+.tar.gz
+.tar
