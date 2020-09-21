@@ -21,7 +21,7 @@ def solution(begin, target, words):
                 temp.append(w_idx)
 
         # 하나도 없을때,
-        if temp : return 0
+        #if temp : return 0
         t_list.append(temp)
 
     print(t_list) #
