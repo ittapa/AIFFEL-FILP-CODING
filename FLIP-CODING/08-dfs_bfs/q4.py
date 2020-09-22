@@ -40,28 +40,32 @@ def solution(tickets):
                 result = find_by_depature(ticket[1], temp_tickets_copy, temp_answer_copy)
 
                 if result == 0:
-                    temp_tickets.append(ticket) # 다시 넣어주기
+                    #temp_tickets.append(ticket) # 다시 넣어주기
                     continue
                 else :
                     return result
             else:
                 return temp_answer_copy
 
-
     return find_by_depature("ICN", tickets, ["ICN"])
 
+#
+# t1 = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
+# r1 = solution(t1)
+# print(r1)
 
-t1 = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]
-r1 = solution(t1)
-print(r1)
+# print("--------------")
+#
+# t2 = [["ICN", "JFK"], ["ICN", "ABC"], ["JFK", "HND"],["HND", "ICN"]]
+# r2 = solution(t2)
+# print(r2)
 
 print("--------------")
 
-t2 = [["ICN", "JFK"], ["ICN", "ABC"], ["JFK", "HND"],["HND", "ICN"]]
-r2 = solution(t2)
-print(r2)
+t3 = [["ICN", "A"], ["A", "C"], ["A", "C"], ["A", "D"], ["D", "B"], ["B", "A"],["C","A"]]
 
-
+r3 = solution(t3)
+print(r3) # [ICN, A, D, B, A, C]
 
 ## 알파벳 순으로 했을때 도달하지 못하는경우.
 

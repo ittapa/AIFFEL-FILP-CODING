@@ -1,9 +1,0 @@
-1번 문제
-mkdir all
-
-2번 문제
-tail -n +2 train.csv | cut -d ',' -f 6 | sort |uniq -c
-
-3번 문제
-cat train.csv | grep '"Brown' | wc -lD
-
