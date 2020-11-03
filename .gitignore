@@ -271,3 +271,4 @@ dmypy.json
 .tar.gz
 .tar
 /utill/
+/lms/03-GoingDeeper/03-Object_Detection/snapshots/
