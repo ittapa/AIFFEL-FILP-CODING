@@ -272,3 +272,7 @@ dmypy.json
 .tar
 /utill/
 /lms/03-GoingDeeper/03-Object_Detection/snapshots/
+/lms/01-EXPLORATION/E24-gan_img/pokemon_pix2pix_dataset/
+/lms/01-EXPLORATION/E24-gan_img/CGAN/
+/lms/01-EXPLORATION/E24-gan_img/cityscapes/
+/lms/01-EXPLORATION/E24-gan_img/GAN/
